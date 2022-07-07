@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>ITERABLE</title>
+    </head>
+    <body>
+        <script>
+            function mynumber() {
+                let n = 10;
+                return {
+                    next: function () {
+                        n*=9999
+                        return{value:n, done:false };
+                    }
+                };
+            }
+            const n = mynumber();
+            n.next();
+            n.next();
+            n.next();
+            n.next();
+            document.write(n.next().value);
+        </script>
+    </body>
+</html>

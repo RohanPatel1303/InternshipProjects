@@ -1,0 +1,14 @@
+<html>
+    <body>
+        <div id="div1"></div>
+        <p id="p1" >this is paragraph</p>
+        <p id="p2" >this is paragraph 2</p>
+        <script>
+            const para = document.createElement("p");
+            const text = document.createTextNode("this is paragraph 3");
+            para.appendChild(text);
+            const element = document.getElementById("div1");
+            element.appendChild(para);
+        </script>
+    </body>
+</html>

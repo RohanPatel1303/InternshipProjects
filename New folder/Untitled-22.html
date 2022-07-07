@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Callback function</title>
+    </head>
+    <body>
+        <script>
+            function myDisPlayear(something) {
+                document.write(something);
+            }
+            function mycalculator(num1, num2, myCallback) {
+                let sum = num1 + num2;
+                myCallback(sum);
+            }
+            mycalculator(410,15, myDisPlayear);
+        </script>
+    </body>
+</html>

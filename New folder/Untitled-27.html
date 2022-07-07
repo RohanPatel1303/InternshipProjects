@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <input id="numb">
+        <h1 onclick="this.innerHTML ='ooooooooooops!'">DON'T TOUCH ME </h1>
+        <button type="button" onclick="myfunction()" >Submit</button>
+        <p id="demo"></p>
+        <script>
+            function myfunction() {
+                let x = document.getElementById("numb").value;
+                let text;
+                if (isNaN(x) || x<1 || x>100) {
+                    text = "Input not valid"
+                }
+                else{
+                    text = "Input accepted"
+                }
+                document.getElementById("demo").innerHTML = text;
+            }
+
+        </script>
+    </body>
+</html>

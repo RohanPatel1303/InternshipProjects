@@ -1,0 +1,17 @@
+<html>
+    <title>Sum of function</title>
+    <body>
+        <p id="demo"></p>
+        <script>
+            function sumALL() {
+                let sum = 0;
+                for(let i = 0; i < arguments.length; i++) {
+                     sum += arguments[i];                    
+                }
+                return sum;
+            }
+//document.getElementById("demo").innerHTML = sumALL(55, 13, 40);
+document.write(sumALL(55, 22, 55, 13, 40, 977, 1002, 5555656, 898998984654, 1000000000000000000000000000000000000));
+        </script>
+    </body>
+</html>

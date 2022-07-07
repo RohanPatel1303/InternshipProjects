@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <p id="demo"></p>
+        <script>
+              const  bike = ["splender plus", "classic-350", "Fz-S", "pulsar", "cd-deluxe"];
+              let blen = bike.length;
+              let text = "<ul>"
+                for (let i = 0; i < blen; i++) {
+                    text += "<li>" + bike[i] + "</li>";     
+                }
+               text += "</ul>"
+               document.getElementById("demo").innerHTML = text;
+               function myFunction(value) {
+                   text += "<li>" + value + "</li>";
+               }
+        </script>
+    </body>
+</html>

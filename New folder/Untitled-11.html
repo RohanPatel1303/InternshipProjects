@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <p id="demo"></p>
+        <script>
+            const  bike = ["splender plus", "classic-350", "Fz-S", "pulsar", "cd-deluxe"];
+            let i=0;
+            let text=""
+            // for(;bike[i];){
+            //     text+= bike[i] + "<br>";
+            //     i++;
+            // }
+            while (bike[i]) {
+                text+= bike[i] + "<br>";
+                i++;
+            }
+            document.getElementById("demo").innerHTML = text;
+        </script>
+    </body>
+</html>

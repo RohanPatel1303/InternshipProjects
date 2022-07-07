@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <p id="demo"></p>
+        <script>
+        function myDisplayer(some) {
+            document.getElementById("demo").innerHTML = some;
+        }
+        function getfile(Callback) {
+            let req =  new XMLHttpRequest();
+            req.open('GET', "Untitled-24.html");
+            req.onload = function() {
+            if (req.status==200) {
+                Callback(this.responseText);
+            }
+            else{
+                Callback("Error: " + req.status);
+            }
+        }
+        req.send();
+        }
+        getfile(myDisplayer)
+        </script>
+    </body>
+</html>

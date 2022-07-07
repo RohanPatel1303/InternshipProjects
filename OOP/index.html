@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <link rel="stylesheet" href="form.css" />
+
+  </head>
+  <body>
+    <div id="first_div">
+      <h2>Student Registration Form</h2>
+
+      <form>
+        <div class="main_div">
+          <label for="" style="display: block">Name</label>
+          <input id="name" type="text" placeholder="Start with surename"/>
+          <span id="name_alert"></span>
+        </div>
+
+        <div class="main_div">
+          <label for="" style="display: block">Enrollment Number</label>
+          <input type="text" id="erno" placeholder="Enter Enrollment Number"/>
+          <span id="erno_alert">Enter your Enrollment no</span>
+        </div>
+
+        <div class="main_div">
+          <label for="" style="display: block">Email Id</label>
+          <input type="email" id="email" placeholder="Enter Email ID"/>
+          <span id="email_alert">Enter your Email Id</span>
+        </div>
+
+        <div class="main_div">
+          <label for="" style="display: block">Address</label>
+          <input type="text" name="" id="add" placeholder="Enter Address"/>
+          <span   id="address_alert">Enter your Address</span>
+        </div>
+
+        <div class="main_div">
+          <label for="" style="display: block">Mobile Number </label>
+          <input type="text" id="mo-no" placeholder="Enter Mobile Number"/>
+          <span id="mono_alert">Enter your mobile no.</span>
+        </div>
+
+        <div class="gender main_div">
+          <label  for="">Select Gender:</label>
+          <div style="display: inline" class="sub_div">
+            <input type="radio" name="gender" id="male" checked/>
+            <label for="" style="display: inline">Male</label>
+            <input type="radio" name="gender" id="female"  />
+            <label for="" style="display: inline">Female</label>
+            <span id="gender_alert"></span>
+          </div>
+        </div>
+      </form>
+
+      <div class="submit_div">
+        <!-- <input type="button" id="submit" value="Submit" /> -->
+        <button  id="submit" onclick="submit()">Submit</button>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    let count=0;
+function calleventlisteners(){
+    document.getElementById("name").addEventListener("change", fcs1);
+    document.getElementById("name").addEventListener("focus",fcs1);
+    document.getElementById("name").addEventListener("input",fcs1);
+
+
+}
+    submit = ()=>{
+        calleventlisteners();
+      console.log("clicked")
+
+      let n1 = document.getElementById("name").value;
+
+      if (n1 == "" || n1 == " ") {
+        document.getElementById("name_alert").innerHTML = "Enter your Name";
+      } else {
+        document.getElementById("name_alert").innerHTML = "";
+      }
+    
+    function myFunction1() {
+      document.getElementById("name_alert").innerHTML = "";
+    }
+
+      document.getElementById("name").addEventListener("focusout", myFunction1);
+      document.getElementById("name").addEventListener("change", fcs1);
+    
+    document.getElementById("erno").addEventListener("focus", myFunction2);
+    document.getElementById("erno").addEventListener("change",fcs2);
+
+    document.getElementById("email").addEventListener("focus", myFunction3);
+    document.getElementById("email").addEventListener("change", fcs3);
+
+    document.getElementById("mo-no").addEventListener("focus", myFunction4);
+    document.getElementById("mo-no").addEventListener("change", fcs4);
+
+    document.getElementById("add").addEventListener("focus", myFunction5);
+    document.getElementById("add").addEventListener("change", fcs5);
+
+    // document.getElementById("submit").addEventListener("onclick", validateForm);
+
+fcs1();
+    // validation for name
+    function fcs1() {
+      console.log("change")
+      let n1 = document.getElementById("name").value;
+
+      if (n1 == "" || n1 == " ") {
+        document.getElementById("name_alert").innerHTML = "Enter your Name";
+      } else {
+        document.getElementById("name_alert").innerHTML = "";
+      }
+    }
+    function myFunction1() {
+      document.getElementById("name_alert").innerHTML = "";
+    }
+
+    // validation for Er no
+    function fcs2() {
+      let er_no = document.getElementById("erno").value;
+      if (er_no == " " || er_no == "") {
+        document.getElementById("erno_alert").innerHTML = "Enter your enrollment no.";
+      } else if (er_no.length != 12) {
+        document.getElementById("erno_alert").innerHTML = "Enrollment no. must be 12 digit";
+      } else {
+        document.getElementById("erno_alert").innerHTML = "";
+      }
+    }
+    function myFunction2() {
+      document.getElementById("erno_alert").innerHTML = "";
+    }
+    
+    // validation for email ID
+    function fcs3() {
+      let email = document.getElementById("email").value;
+      
+      if (email == " " || email == "") {
+        document.getElementById("email_alert").innerHTML ="Enter your Email Id";
+      } else {
+        document.getElementById("email_alert").innerHTML = "";
+      }
+    }
+    function myFunction3() {
+      document.getElementById("email_alert").innerHTML = "";
+    }
+
+    //validation for mobile no.
+    function fcs4() {
+      let mobile = document.getElementById("mo-no").value;
+      let mobile_no = mobile.length;
+      if (mobile_no == " ") {
+        document.getElementById("mono_alert").innerHTML = "Enter your Mobile no.";
+      } else if (mobile_no == "") {
+        document.getElementById("mono_alert").innerHTML ="Enter mobile no.";
+      } else if (mobile_no != 10) {
+        document.getElementById("mono_alert").innerHTML ="Mobile no. must be 10 digit";
+      } else {
+        document.getElementById("mono_alert").innerHTML = "";
+      }
+    }
+    function myFunction4() {
+      document.getElementById("mono_alert").innerHTML = "";
+    }
+
+    // validation foer address
+    function fcs5() {
+      let add = document.getElementById("add").value;
+      if (add == "" || add == " ") {
+        document.getElementById("address_alert").innerHTML ="plese enter your Address";
+      } else {
+        document.getElementById("address_alert").innerHTML = "";
+      }
+    }
+    function myFunction5() {
+      document.getElementById("address_alert").innerHTML = "";
+    }
+    
+  }
+  function fcs1() {
+      console.log("change is called")
+      let n1 = document.getElementById("name").value;
+
+      if (n1 == "" || n1 == " ") {
+        document.getElementById("name_alert").innerHTML = "Enter your Name";
+      } else {
+        document.getElementById("name_alert").innerHTML = "";
+      }
+    }
+    </script>
+    </html>

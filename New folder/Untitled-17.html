@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <p id="demo"></p>
+        <script>
+            class bike {
+                constructor(name, year){
+                    this.name = name;
+                    this.year = year;
+                    console.log(year)
+                }
+                age(){
+                    let date = new Date();
+                    return date.getFullYear() - this.year;
+                }
+            }
+            let mybike = new bike("splender", 2006);
+            document.getElementById("demo").innerHTML = 
+            "my bike is" +  mybike.age()  + "years old";
+        </script>
+    </body>
+</html>

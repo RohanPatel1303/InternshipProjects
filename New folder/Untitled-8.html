@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <p id="demo"></p>
+        <script>
+            const time = new Date().getHours();
+            let  gretting;
+            if (time < 10) {
+               gretting = "Good morning" ;
+            }
+            else if (time < 20) {
+                gretting = "Good day";
+            }
+            else {
+                gretting = "Good evening";
+            }
+            document.getElementById("demo").innerHTML = gretting;
+        </script>
+    </body>
+</html>

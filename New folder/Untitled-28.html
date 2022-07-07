@@ -1,0 +1,21 @@
+<html>
+    <body>
+        <div onmouseover="mOver(this)" onmouseout="mOut(this)">CLICK ON ME</div>
+        <style>
+            div{
+                background-color: brown;
+                padding: 40px;
+                height: 20px;
+                width: 120px;
+            }
+        </style>
+        <script>
+            function mOver(k) {
+                k.innerHTML = "REMEMBER THAT"
+            }
+            function mOut(k) {
+                k.innerHTML = "VIRAT KOHLI IS THE BEST BATSMAN"
+            }
+        </script>
+    </body>
+</html>

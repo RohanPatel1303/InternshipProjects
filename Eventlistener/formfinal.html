@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./form.css">
+    <!-- <script src="./app.js"></script> -->
+</head>
+<body>
+    <div class="main_div">
+        <!-- <input placeholder="fname" id="fname"> -->
+        <input placeholder="hello" id="fname">
+        <!-- <p id="fname">hejah</p> -->
+        <span id="err">shfcdhs</span>
+        <input placeholder="sname" id="sname">
+        
+
+    </div>
+<script>
+    document.getElementById("fname").addEventListener("focus",validate);
+    document.getElementById("fname").addEventListener("focusout",validate);
+    
+    
+
+    function validate(){
+        console.log("a asihd")
+        
+        var x=document.getElementById("fname").value;
+       console.log(x);
+       if(x==""||x==" ")
+       {
+        document.getElementById("err").innerHTML="hello i am rohanm"
+       }
+       else
+       {
+        document.getElementById("err").innerHTML=""
+
+
+       }
+}
+// validate();
+</script>
+</body>
+</html>

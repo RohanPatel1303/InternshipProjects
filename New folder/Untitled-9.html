@@ -1,0 +1,49 @@
+<html>
+    <body>
+        <p id="demo"></p>
+        <script>
+            let month;
+            switch (new Date().getMonth()) {
+                case 0:
+                      month = "january"
+                    break;
+                case 1:
+                      month = "february"
+                    break;
+                case 2:
+                    month = "march"
+                    break;
+                case 3:
+                      month = "april"
+                    break;
+                case 4:
+                      month = "may"
+                    break;
+                case 5:
+                      month = "june"
+                    break;
+                case 6:
+                      month = "julay"
+                    break;
+                case 7:
+                      month = "august"
+                    break;
+                case 8:
+                      month = "september"
+                    break;
+                case 9:
+                      month = "october"
+                    break;
+                case 10:
+                      month = "november"
+                    break;
+                case 11:
+                      month = "december"
+                    break;            
+                default: month = "any of year 2022"
+                    break;
+            }
+            document.getElementById("demo").innerHTML = month;
+        </script>
+    </body>
+</html>

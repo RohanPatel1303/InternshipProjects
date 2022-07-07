@@ -1,0 +1,55 @@
+#first_div{
+    display:flex;
+    flex-direction: column ;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    width: 80%;
+    margin: 25px 150px;
+
+}
+h2{
+    font-size: 50px;
+}
+
+div{
+    margin: 26px;
+}
+#submit{
+    height: 30px;
+    width: 85px;
+    font-size: larger;
+    border-radius: 5px;
+
+}
+#submit:hover{
+    height: 35px;
+    width: 90px;
+    border-color: brown;
+}
+.gender>div{
+    margin: 2px;
+}
+
+.main_div>label{
+    font-size:larger;
+    height: 18px;
+    width: 220px;
+    padding: 6px;
+}
+.main_div>input{
+    height: 18px;
+    width: 220px;
+    padding: 6px;
+    border: 2px solid black;
+    border-radius :8px;
+    
+}
+.gender>label{
+    font-size:larger;
+    padding: 6px;
+}
+.submit_div>label{
+    font-size:larger;
+    padding: 6px;
+}

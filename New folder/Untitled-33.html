@@ -1,0 +1,19 @@
+<html>
+    <body>
+    <button onclick="a()">CLICK ON ME</button>
+    <p id="demo"></p>
+    <script>
+        function a() {
+            let b;
+            let person = prompt("Enter your name:", "Virat Kohli");
+            if (person == null || person == "" ) {
+                b = "user don't want to prompt";
+            }
+            else{
+                b = "Hello" + person + "you will score century in today's match";
+            }
+            document.getElementById("demo").innerHTML = b;
+        }
+    </script>
+    </body>
+</html>

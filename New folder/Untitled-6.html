@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <p id="demo"></p>
+        <script>
+            let text;
+            const today = new Date();
+            const someday = new Date();
+            someday.setFullYear(14-01-2066);
+
+            if (someday>today) {
+            text = "today is before date 14-01-2022";}
+            else {
+            text = "today is after date 14-01-2022";
+            }
+            document.getElementById("demo").innerHTML = text;
+        </script>
+    </body>
+</html>

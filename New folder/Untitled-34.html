@@ -1,0 +1,13 @@
+<html>
+    <body>
+        <p id="demo"></p>
+        <button onclick="clearInterval(b)">CLICK TO STOP TIME</button>
+        <script>
+            const b = setInterval(a, 1000);
+            function a() {
+                const d = new Date();
+                document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+            }
+        </script>
+    </body>
+</html>
